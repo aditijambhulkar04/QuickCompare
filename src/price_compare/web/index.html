@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Price Matcher: Blinkit vs Zepto</title>
+  <meta name="description" content="Search a grocery product and see whether Blinkit or Zepto is cheaper, using live data.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='16' height='32' fill='%23F7C600'/%3E%3Crect x='16' width='16' height='32' fill='%235B2BE0'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <div class="shell">
+    <aside class="rail">
+      <a class="brand" href="#/dashboard" aria-label="Price Matcher home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i></span>
+        <span class="brand-name">Price Matcher</span>
+      </a>
+
+      <nav class="nav" aria-label="Sections">
+        <a href="#/dashboard" data-route="dashboard">Dashboard</a>
+        <a href="#/search" data-route="search">Product search</a>
+        <a href="#/data" data-route="data">Scraped data</a>
+        <a href="#/comparison" data-route="comparison">Comparison</a>
+        <a href="#/matching" data-route="matching">Product matching</a>
+        <a href="#/about" data-route="about">About project</a>
+      </nav>
+
+      <div class="rail-current" id="rail-current" hidden></div>
+    </aside>
+
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+
+  <div id="basket-bar" class="basket-bar" hidden></div>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
